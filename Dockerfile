@@ -7,6 +7,9 @@ WORKDIR /app
 # Copier les fichiers
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install gunicorn
+RUN pip install flask-cors
+
 
 COPY . .
 
